@@ -2,9 +2,8 @@ pipeline {
     agent any
 
     environment {
-        // Docker Hub credentials (make sure to store them securely)
-        DOCKER_USERNAME = 'Subiksha17'
-        DOCKER_PASSWORD = 's1705sha17' // It's better to use Jenkins credentials for security
+        // Reference the credentials stored in Jenkins
+        DOCKER_CREDENTIALS = credentials('docker-hub')  // 'docker-hub-creds' is the ID of your stored credentials
     }
 
     stages {
@@ -20,9 +19,9 @@ pipeline {
 
         stage('Login to Docker Hub') {
             steps {
-                // Log in to Docker Hub
+                // Log in to Docker Hub using the credentials
                 script {
-                    sh "echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin"
+                    sh "echo ${DOCKER_CREDENTIALS_PASSWORD} | docker login -u ${DOCKER_CREDENTIALS_USERNAME} --password-stdin"
                 }
             }
         }
@@ -30,10 +29,10 @@ pipeline {
         stage('Tag and Push Docker Image') {
             steps {
                 // Tag the image for Docker Hub
-                sh 'docker tag test Subiksha17/Guvi_Task2'
+                sh 'docker tag test Subiksha17/Guvi_Task2:latest'
 
                 // Push the image to Docker Hub
-                sh 'docker push Subiksha17/Guvi_Task2'
+                sh 'docker push Subiksha17/Guvi_Task2:latest'
             }
         }
     }
