@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Recipes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2.5em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .recipe-card {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <header>My Favorite Recipes</header>
+
+    <div class="container">
+        <div class="recipe-card">
+            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/06/white-sauce-pasta.jpg" alt="White Sauce Pasta" class="recipe-image">
+            <div class="recipe-content">
+                <h2>White Sauce Pasta</h2>
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Pasta</li>
+                    <li>Milk</li>
+                    <li>Butter</li>
+                    <li>Flour</li>
+                    <li>Cheese</li>
+                    <li>Vegetables (optional)</li>
+                </ul>
+                <h3>Instructions:</h3>
+                <p>Cook pasta, prepare white sauce with butter, flour, and milk. Mix with pasta and vegetables. Top with cheese.</p>
+            </div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="https://www.simplyrecipes.com/thmb/pepperoni-garlic-bread.jpg" alt="Pepperoni Garlic Bread" class="recipe-image">
+            <div class="recipe-content">
+                <h2>Pepperoni Garlic Bread</h2>
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Baguette or bread</li>
+                    <li>Butter</li>
+                    <li>Garlic</li>
+                    <li>Pepperoni slices</li>
+                    <li>Cheese</li>
+                </ul>
+                <h3>Instructions:</h3>
+                <p>Spread garlic butter on bread, add pepperoni and cheese. Bake until golden and crispy.</p>
+            </div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2020/12/paneer-butter-masala.jpg" alt="Paneer Butter Masala" class="recipe-image">
+            <div class="recipe-content">
+                <h2>Paneer Butter Masala</h2>
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Paneer cubes</li>
+                    <li>Butter</li>
+                    <li>Tomato puree</li>
+                    <li>Cream</li>
+                    <li>Spices (garam masala, chili powder)</li>
+                </ul>
+                <h3>Instructions:</h3>
+                <p>Cook paneer in a rich tomato-based gravy with butter, cream, and spices. Serve hot with naan or rice.</p>
+            </div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="https://www.cookwithmanali.com/wp-content/uploads/fruit-salad-icecream.jpg" alt="Fruit Salad with Ice Cream" class="recipe-image">
+            <div class="recipe-content">
+                <h2>Fruit Salad with Ice Cream</h2>
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Mixed fruits (apple, banana, grapes, etc.)</li>
+                    <li>Honey or sugar syrup</li>
+                    <li>Ice cream (vanilla or your choice)</li>
+                    <li>Nuts (optional)</li>
+                </ul>
+                <h3>Instructions:</h3>
+                <p>Chop fruits, mix with honey or syrup. Serve chilled with a scoop of ice cream on top.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
